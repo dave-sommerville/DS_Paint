@@ -1,4 +1,9 @@
+[![DS Code Logo](./media/ds-code-logo.png)](https://ds-code.ca)
+[Visit my Site](htps://ds-code.ca)
+
 # The Great LLM Paint-Off: Who Codes the Best Canvas?
+
+### The Following post was written in response to this project. The main app is the ChatGPT coded paint. 
 
 As a developer, I’m constantly looking for the "ceiling" of current Large Language Models. We use them for snippets and debugging every day, but how do they handle a full-stack front-end task with specific state-management requirements?
 
@@ -68,3 +73,6 @@ While all models successfully created a functional drawing tool, ChatGPT-5 demon
 When you're looking for an AI to act as a pair programmer, look for the one that thinks about how the code will grow, not just if it runs.
 
 **Which version do you prefer?** I've hosted the original outputs for each model so you can test the "feel" of the brushes yourself.
+
+
+<a href="https://www.flaticon.com/free-icons/question" title="question icons">Question icons created by juicy_fish - Flaticon</a>
