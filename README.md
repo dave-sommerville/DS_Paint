@@ -24,7 +24,7 @@ Here is how the experiment went down and why one model emerged as the clear "Sen
 * **Polish:** It was the only model to provide a truly modern, dark-themed UI that felt like a real application rather than a coding exercise.
 * **The Catch:** It did require one minor manual fix to get the canvas running, but the architectural superiority made it the clear winner.
 
-👉 [Check out the polished ChatGPT version here](#)
+👉 [Check out the polished ChatGPT version here](./index.html)
 
 ---
 
@@ -35,7 +35,7 @@ Here is how the experiment went down and why one model emerged as the clear "Sen
 * **Pros:** Excellent use of utility functions like `saveState()` and `applySettings()`. The use of destructuring (e.g., `[lastX, lastY] = [x, y]`) made the code concise and readable.
 * **Cons:** The "Square" brush was notably choppy. While the code was organized, the visual output was a bit boring and lacked the "flair" found in ChatGPT’s textures. It’s solid, professional, but lacked inspiration.
 
-👉 [View Gemini's entry here](#)
+👉 [View Gemini's entry here](./other-pages/gemini.html)
 
 ---
 
@@ -46,7 +46,7 @@ Here is how the experiment went down and why one model emerged as the clear "Sen
 * **The Issue:** Claude crammed the logic for all textures into one massive `draw` function. As a dev, this is a red flag for scalability. If I wanted to add five more brushes, that function would become a nightmare to maintain.
 * **Inconsistency:** It used standard line drawing for "Solid" but shifted to direct pixel manipulation (`fillRect`) for "Spray." It worked, but it wasn't elegant.
 
-👉 [View Claude's entry here](#)
+👉 [View Claude's entry here](./other-pages/claude.html)
 
 ---
 
@@ -57,7 +57,7 @@ Here is how the experiment went down and why one model emerged as the clear "Sen
 * **The Critique:** The code was monolithic and lacked comments. It used `alert()` and `prompt()` boxes for canvas resizing—a big "no-no" for user experience in 2026.
 * **Fragility:** The undo/redo stack felt fragile and the drawing logic was coupled too tightly with state management. It’s the kind of code you’d write for a hackathon at 3:00 AM—it works, but you wouldn’t want to show it to a lead dev.
 
-👉 [View Grok's entry here](#)
+👉 [View Grok's entry here](./other-pages/grok.html)
 
 ---
 
