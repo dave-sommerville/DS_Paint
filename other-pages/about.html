@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DS Paint | About</title>
+  <style>
+    html,body{height:100%; margin:0; font-family:system-ui,Segoe UI,Roboto,-apple-system;}
+    body {
+      background:linear-gradient(180deg,#071021 0%, #07101b 60%); 
+      color:#e6eef8; 
+      display:flex; 
+      flex-direction:column; 
+      gap:12px; 
+      padding:24px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+        <h1>The Great LLM Paint-Off: Who Codes the Best Canvas?</h1>
+    </header>
+    <main>
+        <section id="introduction">
+            <p>As a developer, I'm constantly looking for the "ceiling" of current Large Language Models. We use them for snippets and debugging every day, but how do they handle a full-stack front-end task with specific state-management requirements?</p>
+            <p>To find out, I staged a <strong>"Paint App Contest."</strong> I gave four of the heavy hitters—ChatGPT-5, Gemini Flash 2.5, Claude 4.5, and Grok 4—the exact same prompt: build a single-file, MS Paint-style web app with custom textures, undo/redo functionality, and canvas resizing.</p>
+            <p>Here is how the experiment went down and why one model emerged as the clear "Senior Architect" of the group.</p>
+        </section>
+        <section id="parameters">
+            <h2>The Experiment Parameters</h2>
+            <blockquote>
+                <strong>The Prompt:</strong><br>
+                "Objective: An extremely simplified version of Microsoft Paint as a web app using html, javascript, and css. Method: Single html document... HTML canvas for the drawing surface. Specifications: Three paintbrush textures, color menu, eraser, sizing controls, resize canvas, and undo/redo actions."
+            </blockquote>
+        </section>
+        <hr>
+        <section id="rankings">
+            <article>
+                <h3>1st Place: ChatGPT-5 (The Senior Architect)</h3>
+                <p><strong>Score: A+</strong></p>
+                <p>ChatGPT was the slowest to generate, but the wait was worth it. It didn't just write code; it designed a system.</p>
+                <ul>
+                    <li><strong>The "Winning" Logic:</strong> Instead of using the standard (and often limiting) <code>lineTo</code> method for everything, ChatGPT implemented a <em>Primitive-Based Drawing</em> pattern. It calculates points along a stroke and calls a separate <code>drawDot</code> function for each. This made implementing complex textures like "Splatter" and "Chalk" incredibly easy and scalable.</li>
+                    <li><strong>Scalability:</strong> High. Adding a new texture is as simple as adding a case to the abstracted drawing function.</li>
+                    <li><strong>Polish:</strong> It was the only model to provide a truly modern, dark-themed UI that felt like a real application rather than a coding exercise.</li>
+                    <li><strong>The Catch:</strong> It did require one minor manual fix to get the canvas running, but the architectural superiority made it the clear winner.</li>
+                </ul>
+                <p><a href="#">Check out the polished ChatGPT version here</a></p>
+            </article>
+            <article>
+                <h3>2nd Place: Gemini Flash 2.5 (The Modern Professional)</h3>
+                <p><strong>Score: B</strong></p>
+                <p>Gemini produced very "clean" code. It felt like it was written by a developer who loves modern ES6 syntax and documentation.</p>
+                <ul>
+                    <li><strong>Pros:</strong> Excellent use of utility functions like <code>saveState()</code> and <code>applySettings()</code>. The use of destructuring (e.g., <code>[lastX, lastY] = [x, y]</code>) made the code concise and readable.</li>
+                    <li><strong>Cons:</strong> The "Square" brush was notably choppy. While the code was organized, the visual output was a bit boring and lacked the "flair" found in ChatGPT’s textures. It’s solid, professional, but lacked inspiration.</li>
+                </ul>
+                <p><a href="#">View Gemini's entry here</a></p>
+            </article>
+            <article>
+                <h3>3rd Place: Claude 4.5 (The Creative Specialist)</h3>
+                <p><strong>Score: B</strong></p>
+                <p>Claude took an interesting approach to textures, particularly the "Sketch" brush, but the underlying structure was a bit "spaghetti-ish."</p>
+                <ul>
+                    <li><strong>The Issue:</strong> Claude crammed the logic for all textures into one massive draw function. As a dev, this is a red flag for scalability. If I wanted to add five more brushes, that function would become a nightmare to maintain.</li>
+                    <li><strong>Inconsistency:</strong> It used standard line drawing for "Solid" but shifted to direct pixel manipulation (<code>fillRect</code>) for "Spray." It worked, but it wasn't elegant.</li>
+                </ul>
+                <p><a href="#">View Claude's entry here</a></p>
+            </article>
+            <article>
+                <h3>4th Place: Grok 4 (The Speedster)</h3>
+                <p><strong>Score: Low B / C</strong></p>
+                <p>Grok was the fastest to finish, but it cut far too many corners.</p>
+                <ul>
+                    <li><strong>The Critique:</strong> The code was monolithic and lacked comments. It used <code>alert()</code> and <code>prompt()</code> boxes for canvas resizing—a big "no-no" for user experience in 2026.</li>
+                    <li><strong>Fragility:</strong> The undo/redo stack felt fragile and the drawing logic was coupled too tightly with state management. It’s the kind of code you’d write for a hackathon at 3:00 AM—it works, but you wouldn’t want to show it to a lead dev.</li>
+                </ul>
+                <p><a href="#">View Grok's entry here</a></p>
+            </article>
+        </section>
+        <hr>
+        <section id="conclusion">
+            <h2>Final Thoughts</h2>
+            <p>While all models successfully created a functional drawing tool, ChatGPT-5 demonstrated a superior understanding of software architecture. It built a foundation that allowed for "Splatter" and "Chalk" textures to feel like natural extensions of the system, rather than hard-coded hacks.</p>
+            <p>When you're looking for an AI to act as a pair programmer, look for the one that thinks about how the code will grow, not just if it runs.</p>
+            <p><strong>Which version do you prefer?</strong> I've hosted the original outputs for each model so you can test the "feel" of the brushes yourself.</p>
+        </section>
+    </main>
+</body>
+</html>
