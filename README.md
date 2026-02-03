@@ -1,6 +1,6 @@
 [![DS Code Logo](./media/ds-code-logo.png)](https://ds-code.ca)
 
-[Visit my Site](htps://ds-code.ca)
+![Visit my Site](htps://ds-code.ca)
 
 # The Great LLM Paint-Off: Who Codes the Best Canvas?
 
